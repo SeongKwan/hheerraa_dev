@@ -1,0 +1,14 @@
+@media screen and (max-width: 1430px) {
+    
+}
+
+@media screen and (max-width: 1210px) {
+    
+}
+
+@media screen and (max-width: 990px) {
+    
+}
+.cart-label-mobile {
+    display: none;
+}
