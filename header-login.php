@@ -33,7 +33,7 @@
 					</a>
 				</div>
 				<div class="hamburger-close-button">
-					<img src="<?php echo THEME_IMG_PATH; ?>/close-white.png" class="hamburger-close-button" alt="Close"/>
+					<img src="<?php echo THEME_IMG_PATH; ?>/close_main.png" class="hamburger-close-button" alt="Close"/>
 				</div>
 			</div>
 			<div class="hamburger-icon-menu">
@@ -199,9 +199,7 @@
 	// do_action( 'storefront_before_content' );
 	?>
 
-		<div id="content" class="site-content site-content--home" tabindex="-1">
-			<div class="col-full col-full--home">
-				<aside class="left-sidebar left-sidebar--common">
+<aside class="left-sidebar left-sidebar--common">
 					<?php
 					/**
 					 * Functions hooked into storefront_header action
@@ -253,3 +251,7 @@
 						</div>
 					</footer> -->
 				</aside>
+
+		<div id="content" class="site-content " tabindex="-1">
+			<div class="col-full col-full--home">
+				

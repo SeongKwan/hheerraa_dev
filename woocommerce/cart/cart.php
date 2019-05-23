@@ -169,7 +169,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					</div>
 				<?php } ?>
 
-				<button id="update-bag-button" type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>">Update bags</button>
+				<button id="update-bag-button" type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>">Update bag</button>
 
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
 

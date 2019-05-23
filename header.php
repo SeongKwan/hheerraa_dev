@@ -8,6 +8,7 @@
  */
 
 ?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
@@ -24,21 +25,15 @@
 
 <body <?php body_class(); ?>>
 	<?php do_action( 'storefront_before_site' ); ?>
-
 	<div id="page" class="hfeed site">
 		<div class="hamburger-content is-closed">
 			<div class="hamburger-header">
-				<div class="brand-logo-wrapper">
-					<a href="https://hheerraa.co.kr/" class="custom-logo-link" rel="home" itemprop="url">
-						<img class="logo-white" src="<?php echo THEME_IMG_PATH; ?>/brand-logo-white.png" class="custom-logo" alt="HhEeRrAa-Logo"/>
-					</a>
-				</div>
 				<div class="hamburger-close-button">
-					<img src="<?php echo THEME_IMG_PATH; ?>/close-white.png" class="hamburger-close-button" alt="Close"/>
+					<img src="<?php echo THEME_IMG_PATH; ?>/close_main.png" class="hamburger-close-button" alt="Close"/>
 				</div>
 			</div>
 			<div class="hamburger-icon-menu">
-			<div class="icon-nav-top">
+				<div class="icon-nav-top">
 					<?php if ( !is_user_logged_in() ) { ?>
 					<li class="user-menus-item">
 						<a href="https://hheerraa.co.kr/?page_id=9" aria-current="page">
@@ -134,154 +129,86 @@
 					</a>
 				</div>
 				<div class="hamburger-menu-button">
-					<img src="<?php echo THEME_IMG_PATH; ?>/hamburger_main.svg" class="hamburger-menu-button" alt="Menu"/>
+					<img id="hamburger-menu-button" src="<?php echo THEME_IMG_PATH; ?>/hamburger_main.svg" class="hamburger-menu-button" alt="Menu"/>
 				</div>
 			</div>
-
-
-
-
-
-
-
-
-
-
 			<div class="icon-nav-container">
 				<div class="icon-nav-left">
 					<?php if ( !is_user_logged_in() ) { ?>
 					<li class="user-menus-item">
-						<a href="https://hheerraa.co.kr/?page_id=9" aria-current="page">
-							<!-- <img src="<?php echo THEME_IMG_PATH; ?>/login_main.png" alt="login"/> -->
-							Login
+						<a class="hover-effect-link"
+						href="https://hheerraa.co.kr/?page_id=9&orders">
+							<span>Login</span>
+							<span>
+								<img src="<?php echo THEME_IMG_PATH; ?>/login_main.png" alt="login" width="16" height="16"/>
+							</span>
 						</a>
 					</li>
 					<li class="user-menus-item">
-						<a href="https://hheerraa.co.kr/?page_id=84">
-							<!-- <img src="<?php echo THEME_IMG_PATH; ?>/orders_main.png" alt="order tracking for nonmember"/> -->
-							Order
+						<a class="hover-effect-link"
+							href="https://hheerraa.co.kr/?page_id=9&orders">
+							<span>Orders</span>
+							<span>
+								<img src="<?php echo THEME_IMG_PATH; ?>/	orders_main.png" alt="orders" width="16" height="16"/>
+							</span>
 						</a>
 					</li>
 					<?php } ?>
 					
 					<?php if ( is_user_logged_in() ) { ?>
 					<li class="user-menus-item">
-						<a
+						<a class="hover-effect-link"
 							href="https://hheerraa.co.kr/?page_id=9">
-								<!-- <img src="<?php echo THEME_IMG_PATH; ?>/login_main.png" alt="account"/> -->
-								Account
+							<span>Account</span>
+							<span>
+								<img src="<?php echo THEME_IMG_PATH; ?>/login_main.png" alt="account" width="16" height="16"/>
+							</span>
 						</a>
 					</li>
 					<li class="user-menus-item">
-						<a
+						<a class="hover-effect-link"
 						href="https://hheerraa.co.kr/?page_id=9&orders">
-							<!-- <img src="<?php echo THEME_IMG_PATH; ?>/orders_main.png" alt="orders"/> -->
-							Orders
+							<span>Orders</span>
+							<span>
+								<img src="<?php echo THEME_IMG_PATH; ?>/	orders_main.png" alt="orders" width="16" height="16"/>
+							</span>
 						</a>
 					</li>
 					<?php } ?>
 				</div>
 				<div class="icon-nav-right">
 					<li class="user-menus-item">
-						<a
+						<a class="hover-effect-link"
 						href="https://hheerraa.co.kr/?page_id=7">
-							<!-- <img src="<?php echo THEME_IMG_PATH; ?>/bag_main.png" alt="bag"/> -->
-							Shoppingbag
+							<span>Shoppingbag</span>
+							<span>
+								<img src="<?php echo THEME_IMG_PATH; ?>/bag_main.png" alt="bag" width="16" height="16"/>
+							</span>
 						</a>
 					</li>
 					<li class="user-menus-item">
-						<a
-							href="https://hheerraa.co.kr/?page_id=55">
-							<!-- <img src="<?php echo THEME_IMG_PATH; ?>/heart_main.png" alt="wishlist"/> -->
-							Wishlist
+						<a class="hover-effect-link"
+						href="https://hheerraa.co.kr/?page_id=55">
+							<span>Wishlist</span>
+							<span>
+								<img src="<?php echo THEME_IMG_PATH; ?>/heart_main.png" alt="wishlist" width="16" height="16"/>
+							</span>
 						</a>
 					</li>
 				</div>
 			</div>
 
+		</header>
 
 
-
-
-
-
-
-		</header><!-- #masthead -->
-
-		<?php
-	/**
-	 * Functions hooked in to storefront_before_content
-	 *
-	 * @hooked storefront_header_widget_region - 10
-	 * @hooked woocommerce_breadcrumb - 10 x
-	 */
-	// do_action( 'storefront_before_content' );
-	?>
-
-		<div id="content" class="site-content site-content--home" tabindex="-1">
+		<aside class="left-sidebar left-sidebar--common">
+			<?php
+				do_action( 'storefront_header' );
+			?>
+		</aside>
+		<div id="content" class="site-content" tabindex="-1">
 			<div class="col-full col-full--home">
-				<aside class="left-sidebar left-sidebar--common">
-					<?php
-					/**
-					 * Functions hooked into storefront_header action
-					 *
-					 * @hooked storefront_header_container                 - 0
-					 * @hooked storefront_skip_links                       - 5
-					 * @hooked storefront_social_icons                     - 10
-					 * @hooked storefront_site_branding                    - 20
-					 * @hooked storefront_secondary_navigation             - 30
-					 * @hooked storefront_product_search                   - 40 x
-					 * @hooked storefront_header_container_close           - 41
-					 * @hooked storefront_primary_navigation_wrapper       - 42
-					 * @hooked storefront_primary_navigation               - 50
-					 * @hooked storefront_header_cart                      - 60 x
-					 * @hooked storefront_primary_navigation_wrapper_close - 68
-					 */
-						do_action( 'storefront_header' );
-					?>
-					
-				<!-- <footer id="colophon" class="footer site-footer" role="contentinfo">
-					<div class="col-full">
-
-						<?php
-						/**
-						 * Functions hooked in to storefront_footer action
-						 *
-						 * @hooked storefront_footer_widgets - 10
-						 * @hooked storefront_credit         - 20
-						 */
-						// do_action( 'storefront_footer' );
-						?>
-						<div class="footer-company-sns">
-						<a class="footer-sns-link" href="#">
-								<img src="<?php echo THEME_IMG_PATH; ?>/youtube_main.png" alt="youbute link"/>
-							</a>
-							<a class="footer-sns-link" href="#">
-								<img src="<?php echo THEME_IMG_PATH; ?>/pinterest_main.png" alt="pinterest link"/>
-							</a>
-							<a class="footer-sns-link" href="#">
-								<img src="<?php echo THEME_IMG_PATH; ?>/instagram_main.png" alt="instagram link"/>
-							</a>
-						</div>
-						<section class="footer-section">
-							<div class="company-information">
-								<div class="company-name">상호명 : 헤라(HhEeRrAa)&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-license">사업자등록번호 : 170-24-00644&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-online-business-license">통신판매신고업 : 제2서울성수동1가-2&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-ceo">대표 : 김헤라&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-address">주소 : 서울특별시 중구 퇴계로84길 20-4, 2층(신당동)&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-phone">대표전화 : 070-7543-4372</div>
-							</div>
-							<div class="footer-legal">
-								<div class="footer-copyright">&copy;
-									<?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
-								</div>
-							</div>
-						</section>
-
-					</div>
-				</footer> -->
-				</aside>
+				
 
 				<?php
 		do_action( 'storefront_content_top' );

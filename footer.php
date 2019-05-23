@@ -14,7 +14,7 @@
 
 	<?php do_action( 'storefront_before_footer' ); ?>
 
-	<footer class="main-footer">
+	<footer id='footer' class="main-footer">
 		<div class="footer-top">
 			<div class="footer-line"></div>
 			<div class="footer-content-container">
@@ -26,17 +26,19 @@
 				<div class="footer-content footer-content--terms">
 					<a href="<?php echo get_page_link(53); ?>">Terms</a></div>
 				<div class="footer-content footer-content--sales-refunds">
-					<a href="<?php echo get_page_link(441); ?>">Sales & Refunds</a></div>
+					<a href="<?php echo get_page_link(441); ?>">Instagram</a></div>
 			</div>
 			<div class="footer-line"></div>
 		</div>
 		<div class="footer-company-info-container">
-			<div class="company-license">사업자등록번호 : 170-24-00644&nbsp;&nbsp;
+			<div class="company-license">Registration : 170-24-00644&nbsp;&nbsp;
 				<span class="company-info-divider">|</span>&nbsp;&nbsp;</div>
-			<div class="company-online-business-license">통신판매신고업 : 제2서울성수동1가-2&nbsp;&nbsp;<span class="company-info-divider">|</span>&nbsp;&nbsp;</div>
-			<div class="company-ceo">대표 : 김헤라&nbsp;&nbsp;<span class="company-info-divider">|</span>&nbsp;&nbsp;</div>
-			<div class="company-address">주소 : 서울특별시 중구 퇴계로84길 20-4, 2층(신당동)&nbsp;&nbsp;<span class="company-info-divider">|</span>&nbsp;&nbsp;</div>
-			<div class="company-phone">대표전화 : 070-7543-4372</div>
+			<div class="company-online-business-license">Mail order license : #2011-Seoul Junggu-00810&nbsp;&nbsp;<span class="company-info-divider">|</span>&nbsp;&nbsp;</div>
+			<div class="company-ceo">Owner : HeraKim&nbsp;&nbsp;<span class="company-info-divider">|</span>&nbsp;&nbsp;</div>
+			<div class="company-address">Address : 2nd(Shindang-dong), 20-4, Toegye-ro 84-gil, Jung-gu, Seoul&nbsp;&nbsp;<span class="company-info-divider">|</span>&nbsp;&nbsp;</div>
+			<div class="company-phone">
+				<a href="tel: 070-7543-4372">Customer service : 070-7543-4372</a>
+			</div>
 		</div>
 		<div class="footer-legal">
 			<div class="footer-copyright">&copy;

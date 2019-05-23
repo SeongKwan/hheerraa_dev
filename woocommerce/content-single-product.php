@@ -25,37 +25,37 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class('product-detail-page custom-product-detail-page custom-product-detail-container'); ?>>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('product-detail-page'); ?>>
 
 	<a class="go-back-button-product-detail" href="javascript:history.go(-1)"> <img src="<?php echo THEME_IMG_PATH; ?>/arrow_back.png" alt=""> Back to list</a>
-	<div class="product-detail-wrapper">
+	<?php
+		/**
+		 * Hook: woocommerce_before_single_product_summary.
+		 *
+		 * @hooked woocommerce_show_product_sale_flash - 10
+		 * @hooked woocommerce_show_product_images - 20
+		 */
+		do_action( 'woocommerce_before_single_product_summary' );
+	?>
+	<div class="custom-product-detail-wrapper summary entry-summary entry-summary--product-detail-page">
 		<?php
 			/**
-			 * Hook: woocommerce_before_single_product_summary.
+			 * Hook: woocommerce_single_product_summary.
 			 *
-			 * @hooked woocommerce_show_product_sale_flash - 10
-			 * @hooked woocommerce_show_product_images - 20
+			 * @hooked woocommerce_template_single_title - 5
+			 * @hooked woocommerce_template_single_rating - 10
+			 * @hooked woocommerce_template_single_price - 10
+			 * @hooked woocommerce_template_single_excerpt - 20
+			 * @hooked woocommerce_template_single_add_to_cart - 30
+			 * @hooked woocommerce_template_single_meta - 40
+			 * @hooked woocommerce_template_single_sharing - 50
+			 * @hooked WC_Structured_Data::generate_product_data() - 60
 			 */
-			do_action( 'woocommerce_before_single_product_summary' );
+			do_action( 'woocommerce_single_product_summary' );
 		?>
-		<div class="custom-product-detail-wrapper summary entry-summary entry-summary--product-detail-page">
-			<?php
-				/**
-				 * Hook: woocommerce_single_product_summary.
-				 *
-				 * @hooked woocommerce_template_single_title - 5
-				 * @hooked woocommerce_template_single_rating - 10
-				 * @hooked woocommerce_template_single_price - 10
-				 * @hooked woocommerce_template_single_excerpt - 20
-				 * @hooked woocommerce_template_single_add_to_cart - 30
-				 * @hooked woocommerce_template_single_meta - 40
-				 * @hooked woocommerce_template_single_sharing - 50
-				 * @hooked WC_Structured_Data::generate_product_data() - 60
-				 */
-				do_action( 'woocommerce_single_product_summary' );
-			?>
-		</div>
 	</div>
+	<!-- <div class="product-detail-wrapper">
+	</div> -->
 	<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.

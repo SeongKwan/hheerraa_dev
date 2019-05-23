@@ -10,7 +10,7 @@
  * @package storefront
  */
 
-get_header('login'); ?>
+get_header(); ?>
 
 	<div id="primary" class="content-area bag-container">
 		<main id="main" class="site-main site-main-bag" role="main">

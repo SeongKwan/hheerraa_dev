@@ -88,7 +88,7 @@ wp_enqueue_script( 'tinvwl' );
 										<button type="submit" name="tinvwl-remove"
 												value="<?php echo esc_attr( $wl_product['ID'] ); ?>"
 												title="<?php _e( 'Remove', 'ti-woocommerce-wishlist' ) ?>">
-												<img src="<?php echo THEME_IMG_PATH; ?>/close-white.png" class="wishlist-close-button" alt="Close"/>
+												<img src="<?php echo THEME_IMG_PATH; ?>/close_main.png" class="wishlist-close-button" alt="Close"/>
 										</button>
 									</div>
 
@@ -176,8 +176,7 @@ wp_enqueue_script( 'tinvwl' );
 																	value="<?php echo esc_attr( $wl_product['ID'] ); ?>"
 																	title="<?php echo esc_html( apply_filters( 'tinvwl_wishlist_item_add_to_cart', $wishlist_table_row['text_add_to_cart'], $wl_product, $product ) ); ?>">
 																	
-																	<span
-																	class=""><i class="fas fa-shopping-bag"></i></span>
+																<img src="<?php echo THEME_IMG_PATH; ?>/bag_main.png" alt="bag"/>
 															</button>
 														<?php } ?>
 													</div>

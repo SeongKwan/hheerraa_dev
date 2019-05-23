@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 // $shop_title = woocommerce_page_title(false);
 
-get_header( 'shop' );
+get_header();
 
 
 /**
