@@ -33,7 +33,7 @@
 					</a>
 				</div>
 				<div class="hamburger-close-button">
-					<img src="<?php echo THEME_IMG_PATH; ?>/close-white.png" class="hamburger-close-button" alt="Close"/>
+					<img src="<?php echo THEME_IMG_PATH; ?>/close_main.png" class="hamburger-close-button" alt="Close"/>
 				</div>
 			</div>
 			<div class="hamburger-icon-menu">
@@ -189,61 +189,17 @@
 			</div>
 		</header><!-- #masthead -->
 
-		<div id="content" class="site-content site-content--home" tabindex="-1">
-			<div class="col-full col-full--home">
-				<aside class="left-sidebar left-sidebar--common">
+		<aside class="left-sidebar left-sidebar--common">
 					<?php
-					/**
-					 * Functions hooked into storefront_header action
-					 *
-					 * @hooked storefront_header_container                 - 0
-					 * @hooked storefront_skip_links                       - 5
-					 * @hooked storefront_social_icons                     - 10
-					 * @hooked storefront_site_branding                    - 20
-					 * @hooked storefront_secondary_navigation             - 30
-					 * @hooked storefront_product_search                   - 40 x
-					 * @hooked storefront_header_container_close           - 41
-					 * @hooked storefront_primary_navigation_wrapper       - 42
-					 * @hooked storefront_primary_navigation               - 50
-					 * @hooked storefront_header_cart                      - 60 x
-					 * @hooked storefront_primary_navigation_wrapper_close - 68
-					 */
+					
 						do_action( 'storefront_header' );
 					?>
 					
-					<!-- <footer id="colophon" class="footer site-footer" role="contentinfo">
-						<div class="col-full">
-		
-							<div class="footer-company-sns">
-								<a class="footer-sns-link" href="#">
-									<img src="<?php echo THEME_IMG_PATH; ?>/youtube_main.png" alt="youbute link"/>
-								</a>
-								<a class="footer-sns-link" href="#">
-									<img src="<?php echo THEME_IMG_PATH; ?>/pinterest_main.png" alt="pinterest link"/>
-								</a>
-								<a class="footer-sns-link" href="#">
-									<img src="<?php echo THEME_IMG_PATH; ?>/instagram_main.png" alt="instagram link"/>
-								</a>
-							</div>
-							<section class="footer-section">
-							<div class="company-information">
-								<div class="company-name">상호명 : 헤라(HhEeRrAa)&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-license">사업자등록번호 : 170-24-00644&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-online-business-license">통신판매신고업 : 제2서울성수동1가-2&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-ceo">대표 : 김헤라&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-address">주소 : 서울특별시 중구 퇴계로84길 20-4, 2층(신당동)&nbsp;&nbsp;|&nbsp;&nbsp;</div>
-								<div class="company-phone">대표전화 : 070-7543-4372</div>
-							</div>
-							<div class="footer-legal">
-								<div class="footer-copyright">&copy;
-									<?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
-								</div>
-							</div>
-						</section>
-
-						</div>
-					</footer> -->
+					
 				</aside>
+		<div id="content" class="site-content " tabindex="-1">
+			<div class="col-full col-full--home">
+				
 
 				<?php
 		// do_action( 'storefront_content_top' );

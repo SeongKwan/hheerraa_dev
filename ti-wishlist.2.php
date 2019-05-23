@@ -275,7 +275,7 @@ wp_enqueue_script( 'tinvwl' );
 						<td class="product-remove-wishlist wishlist-remove-td">
 							<button type="submit" name="tinvwl-remove"
 									value="<?php echo esc_attr( $wl_product['ID'] ); ?>"
-									title="<?php _e( 'Remove', 'ti-woocommerce-wishlist' ) ?>"><img src="<?php echo THEME_IMG_PATH; ?>/close_main.png" class="wishlist-close-button" alt="Close"/>
+									title="<?php _e( 'Remove', 'ti-woocommerce-wishlist' ) ?>"><img src="<?php echo THEME_IMG_PATH; ?>/close-white.png" class="wishlist-close-button" alt="Close"/>
 							</button>
 						</td>
 						<td class="product-thumbnail-wishlist">

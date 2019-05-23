@@ -196,6 +196,42 @@ function bbloomer_separate_registration_form() {
         
                     
                     <?php endif; ?>
+
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_password2">Password confirmation</label>
+                        <input class="registration-input" type="password" class="input-text" name="password2" id="reg_password2" value="<?php if ( ! empty( $_POST['password2'] ) ) echo esc_attr( $_POST['password2'] ); ?>" />
+                    </p>
+
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide postcode-wrapper_for_registration">
+                        <label for="reg_billing_postcode">Postcode</label>
+                        <div class="input-wrapper-postcode">
+                            <input class="registration-input" type="text" class="input-text" name="billing_postcode" id="reg_billing_postcode" value="<?php if ( ! empty( $_POST['billing_postcode'] ) ) esc_attr_e( $_POST['billing_postcode'] ); ?>" />
+                            <input class="button_find_postcode_for_registration" type="button" onclick="execDaumPostcode()" value="Find your postcode">
+                        </div>
+                    </p>
+
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_billing_address_1">Address</label>
+                        <input class="registration-input" type="text" class="input-text" name="billing_address_1" id="reg_billing_address_1" value="<?php if ( ! empty( $_POST['billing_address_1'] ) ) esc_attr_e( $_POST['billing_address_1'] ); ?>" />
+                    </p>
+
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_billing_address_2">Apartment, suite, etc.</label>
+                        <input class="registration-input" type="text" class="input-text" name="billing_address_2" id="reg_billing_address_2" value="<?php if ( ! empty( $_POST['billing_address_2'] ) ) esc_attr_e( $_POST['billing_address_2'] ); ?>" />
+                    </p>
+
+                    
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_billing_phone">Phone</label>
+                        <input class="registration-input" type="text" class="input-text" name="billing_phone" id="reg_billing_phone" value="<?php if ( ! empty( $_POST['billing_phone'] ) ) esc_attr_e( $_POST['billing_phone'] ); ?>" />
+                    </p>
+
+                    <p class="form-row terms wc-terms-and-conditions">
+                        <label class="terms-conditions_for_registration woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                            <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" name="terms" <?php checked( apply_filters( 'woocommerce_terms_is_checked_default', isset( $_POST['terms'] ) ), true ); ?> id="terms" /> <span><?php printf( __( 'I&rsquo;ve read and accept the <a href="%s" target="_blank" class="woocommerce-terms-and-conditions-link">terms &amp; conditions</a>', 'woocommerce' ), esc_url( wc_get_page_permalink( 'terms' ) ) ); ?></span>
+                        </label>
+                        <input type="hidden" name="terms-field" value="1" />
+                    </p>
         
                     <?php do_action( 'woocommerce_register_form' ); ?>
         
@@ -230,7 +266,7 @@ function wc_register_form_password_repeat() {
 	</p>
 	<?php
 }
-add_action( 'woocommerce_register_form', 'wc_register_form_password_repeat' );
+// add_action( 'woocommerce_register_form', 'wc_register_form_password_repeat' );
 
 
 /**
@@ -276,7 +312,7 @@ function wooc_extra_register_fields() {
     <?php
     }
     
-    add_action( 'woocommerce_register_form', 'wooc_extra_register_fields' );
+    // add_action( 'woocommerce_register_form', 'wooc_extra_register_fields' );
 
 
 

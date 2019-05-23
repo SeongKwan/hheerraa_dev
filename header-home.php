@@ -26,20 +26,19 @@
 
 	<div id="page" class="hfeed site">
 		<div class="full-bg">
-			<img src="<?php echo THEME_IMG_PATH; ?>/full-bg.jpeg" alt="full-bg">
+			<img src="<?php echo THEME_IMG_PATH; ?>/full-bg.jpg" alt="full-bg">
 		</div>
 		<div class="full-bg-desktop">
 			<img src="<?php echo THEME_IMG_PATH; ?>/full-bg-desktop.jpg" alt="full-bg-desktop">
 		</div>
+		<div class="full-bg-pad">
+			<img src="<?php echo THEME_IMG_PATH; ?>/full-bg-pad.jpg" alt="full-bg-pad">
+		</div>
 		<div class="hamburger-content is-closed">
 			<div class="hamburger-header">
-				<div class="brand-logo-wrapper">
-					<a href="https://hheerraa.co.kr/" class="custom-logo-link" rel="home" itemprop="url">
-						<img class="logo-white" src="<?php echo THEME_IMG_PATH; ?>/brand-logo-white.png" class="custom-logo" alt="HhEeRrAa-Logo"/>
-					</a>
-				</div>
+				
 				<div class="hamburger-close-button">
-					<img src="<?php echo THEME_IMG_PATH; ?>/close-white.png" class="hamburger-close-button" alt="Close"/>
+					<img src="<?php echo THEME_IMG_PATH; ?>/close_main.png" class="hamburger-close-button" alt="Close"/>
 				</div>
 			</div>
 			<div class="hamburger-icon-menu">
@@ -139,7 +138,7 @@
 					</a>	
 				</div>
 				<div class="hamburger-menu-button">
-					<img src="<?php echo THEME_IMG_PATH; ?>/hamburger_main.svg" class="hamburger-menu-button" alt="Menu"/>
+					<img id="hamburger-menu-button" src="<?php echo THEME_IMG_PATH; ?>/hamburger_main.svg" class="hamburger-menu-button" alt="Menu"/>
 				</div>
 			</div>
 		</header><!-- #masthead -->

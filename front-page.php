@@ -23,7 +23,7 @@ get_header('home');
 			?>
 
 			<?php 
-				// echo do_shortcode('[smartslider3 slider=5]');
+				// echo do_shortcode('[smartslider3 slider=9]');
 			?>
 	</div>
 
@@ -33,3 +33,21 @@ get_header('home');
 <?php
 
 get_footer('home');
+
+
+// .custom-wishlist-item-container {
+// 	width: calc(50% - 2px);
+// 	margin-bottom: 2px !important;
+// }
+// .custom-wishlist-item-container:nth-child(3n - 1) {
+// 	margin: 0 !important;
+// }
+
+// .custom-wishlist-item-container:nth-child(2n - 1) {
+// 	margin-right: 1px !important;
+// 	margin-bottom: 2px !important;
+// }
+// .custom-wishlist-item-container:nth-child(2n) {
+// 	margin-left: 1px !important;
+// 	margin-bottom: 2px !important;
+// }
