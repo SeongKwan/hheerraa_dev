@@ -443,21 +443,18 @@
 
   $(".set > a").on("click", function () {
     if ($(this).hasClass("active")) {
+      console.log($(this), 'active');
       $(this).removeClass("active");
       $(this)
         .siblings(".content")
         .slideUp(200);
-      $(".set > a i")
+      $("i", this)
         .removeClass("minus")
         .addClass("plus");
     } else {
-      // $(".set > a i")
-      //   .removeClass("minus")
-      //   .addClass("plus");
-      $(this)
-        .find("i")
-        .removeClass("plus")
-        .addClass("minus");
+      console.log($(this), 'deactive');
+      $("i", this).removeClass("plus");
+      $("i", this).addClass("minus");
       // $(".set > a").removeClass("active");
       $(this).addClass("active");
       // $(".content").slideUp(200);

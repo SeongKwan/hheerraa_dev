@@ -1694,16 +1694,30 @@ div.summary.entry-summary p.price {
 }
 
 .set>a i {
+    position: relative;
     margin-left: 0.5rem !important;
     font-weight: 600;
     font-size: 0.7rem;
     font-style: normal !important;
+    transition: all 0.2s;
 }
 .set>a i.minus::before {
-    content: '\002D';
+    content: '\039b';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-56%) rotate(180deg);
+    font-weight: 100;
+    font-size: 0.6rem;
+    transition: all 0.2s;
 }
 .set>a i.plus::before {
-    content: '\002B';
+    content: '\039b';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 100;
+    font-size: 0.6rem;
+    transition: all 0.2s;
 }
 .set>a.active {
     color: #1a1a1a;
@@ -3823,6 +3837,7 @@ tr.order-total th {
     width: 100%;
     color: white;
     padding: 0.5rem;
+    text-decoration: none !important;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
@@ -6133,7 +6148,7 @@ span.required {
     div.product-title-star-sale .woocommerce-loop-product__title {
         color: #4d4d4d !important;
         bottom: -0.5rem !important;
-        left: 0.5rem !important;
+        left: 0rem !important;
         font-size: 1rem !important;
         text-align: left !important;
         padding-right: 5rem !important;
@@ -6144,8 +6159,8 @@ span.required {
         text-align: left !important;
         font-weight: 100 !important;
         margin-top: -3px;
-        left: 0.5rem !important;
         bottom: -0.5rem !important;
+        left: 0rem !important;
         font-size: 1rem !important;
     }
 
@@ -6758,6 +6773,11 @@ span.required {
     .return-to-shop a {
         color: #4d4d4d !important;
     } 
+
+    .cart-total-title {
+        font-size: 1.25rem !important;
+        margin-bottom: 1.75rem !important;
+    }
 
 
     .custom-cart-head {
