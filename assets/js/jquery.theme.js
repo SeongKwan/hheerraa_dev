@@ -466,4 +466,25 @@
 
 
 
+
+
+
+
+  $( window ).scroll( function() {
+    if ( $( this ).scrollTop() > 200 ) {
+      $( '.scroll-to-top' ).fadeIn();
+      $(".scroll-to-top").on("click", function() {
+        var body = $("html, body");
+        body.stop().animate({scrollTop:0}, 300, 'swing', function() { 
+          return false;
+        });
+      } );
+    } else {
+      $( '.scroll-to-top' ).fadeOut();
+    }
+  } );
+  
+
+
+
 })(jQuery);

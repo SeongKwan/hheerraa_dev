@@ -14,7 +14,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area bag-container">
 		<main id="main" class="site-main site-main-bag" role="main">
-	<h1>page-6.php</h1>
 			<?php
 			while ( have_posts() ) :
 				the_post();

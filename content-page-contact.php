@@ -57,9 +57,10 @@
 			</div>
 		</div>
 		<div class="sns-links-icon-container">
-			<i class="fab fa-instagram"></i>
-			<i class="fab fa-youtube"></i>
-			<i class="fab fa-pinterest"></i>
+			<a target="_blank" href="https://www.instagram.com/hheerraa_official/?hl=ko"><i class="fab fa-instagram"></i></a>
+			<a target="_blank" href="https://www.youtube.com/channel/UC9VXiSSomL8Khi3bM0OCd8A/featured"><i class="fab fa-youtube"></i></a>
+			<a target="_blank" href="https://www.pinterest.com/
+/hheerraaseoul"><i class="fab fa-pinterest"></i></a>
 		</div>
 	</div>
 		

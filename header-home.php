@@ -15,8 +15,36 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0, user-scalable=no">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<meta name="description" content="Showing the endless differences in detail.">
+	<meta name="google-site-verification" content="rDlx5JnqnOiPFyUnR3eWfFCOa1DhVIysnoiRngFH28Q" />
+	<meta name="naver-site-verification" content="64932338dfa6eb91b0a202c29fa39c8b44d08894"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="p:domain_verify" content="d43d82f133f70698568c10c75df6c3b0"/>
+	<meta name="author" content="헤라(HeraKim)" />
+	<meta name="keywords" content="디자이너 브랜드" />
+
+<meta property="og:type" content="website" />
+
+<meta property="og:title" content="HhEeRrAa - Showing the endless differences in detail" />
+
+<meta property="og:description" content="헤라(HhEeRrAa) - 끝없는 디테일의 차이를 보여주는 것, 디테일에서 무한한 차이를 보여주는 것. Showing the endless differences in detail" />
+
+<meta property="og:image" content="<?php echo THEME_IMG_PATH; ?>/brand-logo_main.png" />
+
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<title>HhEeRrAa</title>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140788690-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140788690-1');
+</script>
+
 
 	<?php wp_head(); ?>
 </head>
@@ -25,6 +53,16 @@
 	<?php do_action( 'storefront_before_site' ); ?>
 
 	<div id="page" class="hfeed site">
+		<div class="event-description">
+			<div class="event-description-title">2019 Summer</div>
+			<div class="event-description-content">Pre-order 10% Discount</div>
+			<div class="event-description-date"><div>May 24 - May 31</div><div class="event-description-shipping">(6월 1일부터 순차 배송)</div></div>
+			
+			<div class="event-description-title-kr">2019 여름시즌 전제품을 10% 할인된 금액으로 만나보세요</div>
+			<div class="event-description-link-shop">
+				<a href="<?php echo get_page_link(6); ?>">시즌제품 보러가기</a>
+			</div>
+		</div>
 		<div class="full-bg">
 			<img src="<?php echo THEME_IMG_PATH; ?>/full-bg.jpg" alt="full-bg">
 		</div>
@@ -133,8 +171,8 @@
 				<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 				<div class="site-branding header-brand-logo">
 					<a href="https://hheerraa.co.kr/" class="custom-logo-link" rel="home" itemprop="url">
-					<img class="logo-black" src="<?php echo THEME_IMG_PATH; ?>/brand-logo-white.png" class="custom-logo" alt="HhEeRrAa-Logo"/>
-						<img class="logo-white" src="<?php echo THEME_IMG_PATH; ?>/brand-logo-white.png" class="custom-logo" alt="HhEeRrAa-Logo"/>
+					<img class="logo-black" src="<?php echo THEME_IMG_PATH; ?>/brand-logo_main.png" class="custom-logo" alt="HhEeRrAa-Logo"/>
+						<img class="logo-white" src="<?php echo THEME_IMG_PATH; ?>/brand-logo_main.png" class="custom-logo" alt="HhEeRrAa-Logo"/>
 					</a>	
 				</div>
 				<div class="hamburger-menu-button">

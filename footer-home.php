@@ -19,6 +19,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<div class="scroll-to-top"><img src="<?php echo THEME_IMG_PATH; ?>/up_main.png" alt="scrollTop"></div>
 </body>
 </html>

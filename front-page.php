@@ -23,8 +23,10 @@ get_header('home');
 			?>
 
 			<?php 
-				// echo do_shortcode('[smartslider3 slider=9]');
+				// echo do_shortcode('[sg_popup id=569]');
+				
 			?>
+			
 	</div>
 
 	</main><!-- #main -->

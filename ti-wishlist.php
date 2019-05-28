@@ -18,7 +18,7 @@ wp_enqueue_script( 'tinvwl' );
 	} ?>
 
 
-	<form class="" action="<?php echo esc_url( tinv_url_wishlist() ); ?>" method="post" autocomplete="off">
+	<form action="<?php echo esc_url( tinv_url_wishlist() ); ?>" method="post" autocomplete="off">
 		<div class="divider-custom-cart"></div>
 		<?php do_action( 'tinvwl_before_wishlist_table', $wishlist ); ?>
 		<div class="custom-wishlist-container">

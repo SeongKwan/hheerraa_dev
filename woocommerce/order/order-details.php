@@ -77,20 +77,19 @@ if ( $show_downloads ) {
 		</div>
 
 		<div class="custom-order-detail-tfoot">
-			<!-- <h2>Payment details</h2> -->
 			<?php
 				foreach ( $order->get_order_item_totals() as $key => $total ) {
 
-					if ($total['label'] === '소계:') {
+					if ($total['label'] === 'Subtotal:') {
 						$total['label'] = 'Subtotal';
 					}
-					if ($total['label'] === '배송:') {
+					if ($total['label'] === 'Shipping Fee:') {
 						$total['label'] = 'Shipping Fee';
 					}
-					if ($total['label'] === '결제 방법:') {
+					if ($total['label'] === 'Payment method:') {
 						$total['label'] = 'Payment method';
 					}
-					if ($total['label'] === '총계:') {
+					if ($total['label'] === 'Total:') {
 						$total['label'] = 'Total';
 					}
 					

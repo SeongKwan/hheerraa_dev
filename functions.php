@@ -643,7 +643,7 @@ function bbloomer_cart_refresh_update_qty() {
 /**
  * Change the add to cart text on single product pages
  */
-add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text');
+// add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text');
 function woo_custom_cart_button_text() {
     
 	foreach( WC()->cart->get_cart() as $cart_item_key => $values ) {
@@ -661,7 +661,7 @@ function woo_custom_cart_button_text() {
 /**
  * Change the add to cart text on product archives
  */
-add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );
+// add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );
 function woo_archive_custom_cart_button_text() {
     global $product;
     
@@ -732,7 +732,7 @@ function custom_wc_billing_fields() {
         'required' => true
     );
     $fields2['billing_first_name'] = array(
-        'label' => 'First name',
+        'label' => 'Name',
         'required' => true
     );
     $fields2['billing_phone'] = array(
@@ -768,7 +768,7 @@ function custom_wc_shipping_fields() {
         'required' => false
     );
     $fields2['shipping_first_name'] = array(
-        'label' => 'First name',
+        'label' => 'Name',
         'required' => false
     );
     $fields2['shipping_phone'] = array(
@@ -1019,3 +1019,49 @@ function md_custom_woocommerce_checkout_fields( $fields )
 add_filter( 'woocommerce_checkout_fields', 'md_custom_woocommerce_checkout_fields' );
 
 
+
+
+add_filter( 'woocommerce_product_subcategories_args', 'custom_woocommerce_get_subcategories_ordering_args' );
+
+    function custom_woocommerce_get_subcategories_ordering_args( $args ) {
+      $args['orderby'] = 'title';
+      return $args;
+    }
+
+
+    //Remove required field requirement for first/last name in My Account Edit form
+    add_filter('woocommerce_save_account_details_required_fields', 'remove_required_fields');
+
+        function remove_required_fields( $required_fields ) {
+            unset($required_fields['account_last_name']);
+
+            return $required_fields;
+        }
+
+
+
+
+
+
+// New order notification only for "Pending" Order status
+add_action( 'woocommerce_checkout_order_processed', 'pending_new_order_notification', 20, 1 );
+function pending_new_order_notification( $order_id ) {
+    // Get an instance of the WC_Order object
+    $order = wc_get_order( $order_id );
+
+    // Only for "pending" order status
+    if( ! $order->has_status( 'pending' ) ) return;
+
+    // Get an instance of the WC_Email_New_Order object
+    $wc_email = WC()->mailer()->get_emails()['WC_Email_New_Order'];
+
+    ## -- Customizing Heading, subject (and optionally add recipients)  -- ##
+    // Change Subject
+    $wc_email->settings['subject'] = __('[{site_title}] New customer pending order ({order_number}) | {order_date}');
+    // Change Heading
+    $wc_email->settings['heading'] = __('New customer Pending Order'); 
+    // $wc_email->settings['recipient'] .= ',name@email.com'; // Add email recipients (coma separated)
+
+    // Send "New Email" notification (to admin)
+    $wc_email->trigger( $order_id );
+}

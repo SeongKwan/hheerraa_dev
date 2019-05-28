@@ -29,6 +29,4 @@
 	do_action( 'storefront_single_post_bottom' );
 	?>
 
-	<p>content-lookbook.php</p>
-
 </article><!-- #post-## -->
